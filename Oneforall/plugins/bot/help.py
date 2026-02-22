@@ -52,10 +52,13 @@ async def helper_private(
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     keyboard = private_help_panel(_)
-    await message.reply_video(
-        video="https://files.catbox.moe/dfj9zk.mp4",
-        caption=_["help_2"],
-        reply_markup=InlineKeyboardMarkup(keyboard),
+    await message.reply_photo(
+    photo=config.HELP_IMG_URL,
+    caption=(
+        "❖ ʜᴇʟᴘ ᴍᴀɪɴ ᴍᴇɴᴜ ❖\n\n"
+        "✦ ᴄʜσσsє ᴛʜє ᴄᴧᴛєɢσʀʏ ꜰσʀ ᴡʜɪᴄʜ ʏσᴜ ᴡᴧηηᴧ ɢєᴛ ʜєʟᴘ 🎀✨"
+    ),
+    reply_markup=help_pannel(_)
     )
 
 
@@ -126,6 +129,46 @@ async def on_back_button(client, CallbackQuery):
             _["help_1"].format(SUPPORT_CHAT), reply_markup=keyboard
         )
 
+@app.on_callback_query(filters.regex("^help_category") & ~BANNED_USERS)
+async def help_category_handler(client, query: CallbackQuery):
+
+    data = query.data.split()[1]
+    _ = get_string(query.message.chat.id)
+
+    if data == "videochat":
+        await query.message.edit_text(
+            "• ᴠɪᴅєσᴄʜᴧᴛ •",
+            reply_markup=videochat_panel(_),
+        )
+
+    elif data == "fun":
+        await query.message.edit_text(
+            "• ꜰᴜη •",
+            reply_markup=fun_panel(_),
+        )
+
+    elif data == "moderation":
+        await query.message.edit_text(
+            "• ϻᴧηᴧɢєϻєηᴛ • ",
+            reply_markup=moderation_panel(_),
+        )
+
+    elif data == "sudoers":
+        await query.message.edit_text(
+            " • ꜱᴜᴅσєʀꜱ σηʟʏ •",
+            reply_markup=sudoers_panel(_),
+        )
+
+
+@app.on_callback_query(filters.regex("^back_to_main$") & ~BANNED_USERS)
+async def back_to_main_handler(client, query: CallbackQuery):
+
+    _ = get_string(query.message.chat.id)
+
+    await query.message.edit_text(
+        "Choose the category for which you wanna get help",
+        reply_markup=help_pannel(_),
+    )
 
 @app.on_callback_query(filters.regex("mplus"))
 async def mb_plugin_button(client, CallbackQuery):
@@ -143,4 +186,4 @@ async def mb_plugin_button(client, CallbackQuery):
     else:
         await CallbackQuery.edit_message_text(
             getattr(Helper, cb), reply_markup=keyboard
-        )
+    )

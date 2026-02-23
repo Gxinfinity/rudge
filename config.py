@@ -96,19 +96,35 @@ autoclean = []
 confirmer = {}
 
 
-START_VIDEO_URL = os.getenv("START_VIDEO_URL", "https://files.catbox.moe/ys1wfm.mp4")
-PING_IMG_URL = os.getenv("PING_IMG_URL", "https://files.catbox.moe/0ehtgk.jpg")
-PLAYLIST_IMG_URL = "https://files.catbox.moe/2m6yep.jpg"
-STATS_IMG_URL = "https://files.catbox.moe/0ehtgk.jpg"
-TELEGRAM_AUDIO_URL = "https://files.catbox.moe/opavqw.jpg"
-TELEGRAM_VIDEO_URL = "https://files.catbox.moe/0ehtgk.jpg"
-STREAM_IMG_URL = "https://files.catbox.moe/opavqw.jpg"
-SOUNCLOUD_IMG_URL = "https://files.catbox.moe/opavqw.jpg"
-YOUTUBE_IMG_URL = "https://files.catbox.moe/0ehtgk.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://files.catbox.moe/0ehtgk.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://files.catbox.moe/opavqw.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://files.catbox.moe/0ehtgk.jpg"
+PING_IMG_URL = os.getenv("PING_IMG_URL", "https://files.catbox.moe/nndfm5.jpg")
+PLAYLIST_IMG_URL = "https://graph.org/file/3a907478d7a13ff1e8ecb-606e29f797b109ab82.jpg"
+STATS_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+STREAM_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg"
 
+START_IMG_URL = os.getenv("START_IMG_URL")
+
+if START_IMG_URL:
+    START_IMG_URL = random.choice(START_IMG_URL.split(","))
+else:
+    START_IMG_URL = random.choice([
+        "https://graph.org/file/3a907478d7a13ff1e8ecb-606e29f797b109ab82.jpg",
+        "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg",
+        "https://graph.org/file/3a907478d7a13ff1e8ecb-606e29f797b109ab82.jpg"
+    ])
+    
+def time_to_seconds(time):
+    stringt = str(time)
+    return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
+
+
+DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
 
 def time_to_seconds(time):
     stringt = str(time)

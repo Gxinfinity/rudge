@@ -35,6 +35,10 @@ OWNER_ID = int(os.getenv("OWNER_ID", "7651303468"))
 SUDO_USERS = list(map(int, os.getenv("SUDO_USERS", "7487670897").split()))
 
 ## Fill these variables if you're deploying on heroku.
+
+FORCE_CHANNEL_1 = os.getenv("FORCE_CHANNEL_1", "https://t.me/dark_musictm")
+FORCE_CHANNEL_2 = os.getenv("FORCE_CHANNEL_2", "https://t.me/docker_git_bit")
+
 # Your heroku app name
 HEROKU_APP_NAME = os.getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account

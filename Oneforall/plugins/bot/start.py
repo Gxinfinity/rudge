@@ -137,7 +137,6 @@ async def start_pm(client, message: Message, _):
                 random.choice(NEXT_IMG),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
-                has_spoiler=True,
             )
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)

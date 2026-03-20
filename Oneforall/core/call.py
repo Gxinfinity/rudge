@@ -199,7 +199,7 @@ class Call(PyTgCalls):
             MediaStream(
                 out,
                 audio_parameters=AudioQuality.HIGH,
-                video_parameters=VideoQuality.SD_480p,
+                video_parameters=VideoQuality.SD_360p,
                 ffmpeg_parameters=f"-ss {played} -to {duration}",
             )
             if playing[0]["streamtype"] == "video"
@@ -251,7 +251,7 @@ class Call(PyTgCalls):
             stream = MediaStream(
                 link,
                 audio_parameters=AudioQuality.HIGH,
-                video_parameters=VideoQuality.SD_480p,
+                video_parameters=VideoQuality.SD_360p,
             )
         else:
             stream = MediaStream(
@@ -270,7 +270,7 @@ class Call(PyTgCalls):
             MediaStream(
                 file_path,
                 audio_parameters=AudioQuality.HIGH,
-                video_parameters=VideoQuality.SD_480p,
+                video_parameters=VideoQuality.SD_360p,
                 ffmpeg_parameters=f"-ss {to_seek} -to {duration}",
             )
             if mode == "video"
@@ -307,14 +307,14 @@ class Call(PyTgCalls):
             stream = MediaStream(
                 link,
                 audio_parameters=AudioQuality.HIGH,
-                video_parameters=VideoQuality.SD_480p,
+                video_parameters=VideoQuality.SD_360p,
             )
         else:
             stream = (
                 MediaStream(
                     link,
                     audio_parameters=AudioQuality.HIGH,
-                    video_parameters=VideoQuality.SD_480p,
+                    video_parameters=VideoQuality.SD_360p,
                 )
                 if video
                 else MediaStream(

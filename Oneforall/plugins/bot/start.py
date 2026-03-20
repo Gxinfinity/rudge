@@ -134,7 +134,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(NEXI_IMG)
+                random.choice(NEXI_IMG),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
                 has_spoiler=True,

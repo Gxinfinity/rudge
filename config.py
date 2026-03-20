@@ -28,10 +28,10 @@ PRIVATE_BOT_MODE = os.getenv("PRIVATE_BOT_MODE", None)
 DURATION_LIMIT_MIN = int(os.getenv("DURATION_LIMIT", 100000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(os.getenv("LOGGER_ID", -1002869205475))
+LOGGER_ID = int(os.getenv("LOGGER_ID", -1003748760283))
 
 # Get this value from @BRANDRD_ROBOT on Telegram by /id
-OWNER_ID = int(os.getenv("OWNER_ID", "7651303468"))
+OWNER_ID = int(os.getenv("OWNER_ID", "8285730532"))
 SUDO_USERS = list(map(int, os.getenv("SUDO_USERS", "7487670897").split()))
 
 ## Fill these variables if you're deploying on heroku.

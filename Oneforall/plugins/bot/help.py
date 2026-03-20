@@ -11,6 +11,7 @@ from Oneforall.utils.decorators.language import LanguageStart, languageCB
 from Oneforall.utils.inline.help import help_back_markup, private_help_panel
 from Oneforall.utils.stuffs.buttons import BUTTONS
 from Oneforall.utils.stuffs.helper import Helper
+from pyrogram.types import CallbackQuery
 from strings import get_string, helpers
 
 

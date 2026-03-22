@@ -25,15 +25,15 @@ def private_panel(_):
             )
         ],
         [
-            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT,style=ButtonStyle.SECONDARY),
-            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL,style=ButtonStyle.DANGER),
+            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT,style=ButtonStyle.PRIMARY),
+            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL,style=ButtonStyle.PRIMARY),
         ],
         [InlineKeyboardButton(text=_["S_B_4"], callback_data="settings_back_helper",style=ButtonStyle.PRIMARY)],
         [
-            InlineKeyboardButton(text=_["S_B_5"], url="https://t.me/docker_git_bit",style=ButtonStyle.SECONDARY),
+            InlineKeyboardButton(text=_["S_B_5"], url="https://t.me/docker_git_bit"),
         ],
         [
-            InlineKeyboardButton(text="✦ ᴡєʙ ɢᴧϻєꜱ 🎮✨", url="https://telegram-game-hub.vercel.app",style=ButtonStyle.SECONDARY)
+            InlineKeyboardButton(text="✦ ᴡєʙ ɢᴧϻєꜱ 🎮✨", url="https://telegram-game-hub.vercel.app",style=ButtonStyle.PRIMARY)
         ],
     ]
     return buttons

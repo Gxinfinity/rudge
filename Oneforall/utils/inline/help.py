@@ -11,14 +11,17 @@ def help_pannel(_, START: Union[bool, int] = None):
         InlineKeyboardButton(
             text=_["BACK_PAGE"],
             callback_data=f"mbot_cb",
+            style=ButtonStyle.SECONDARY,
         ),
         InlineKeyboardButton(
             text=_["BACK_BUTTON"],
             callback_data=f"settingsback_helper",
+            style=ButtonStyle.DANGER,
         ),
         InlineKeyboardButton(
             text=_["NEXT_PAGE"],
             callback_data=f"mbot_cb",
+            style=ButtonStyle.SECONDARY,
         ),
     ]
     mark = second if START else first

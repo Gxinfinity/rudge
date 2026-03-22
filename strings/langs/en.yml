@@ -229,12 +229,12 @@ stream_3 : "<blockquote>✨ ᴍᴀᴅᴇ ʙʏ ➠ <a href=\"https://t.me/dark_mu
 
 # General (Stylish Buttons)
 
-CLOSE_BUTTON      : "<emoji id=5408910121264756249>⚙️</emoji> ᴄʟᴏsᴇ <emoji id=5408910121264756249>⚙️</emoji>"
-CLOSEMENU_BUTTON  : "<emoji id=5408910121264756249>⚙️</emoji> ᴄʟᴏsᴇ <emoji id=5408910121264756249>⚙️</emoji>"
-BACK_BUTTON : "<emoji id=5972330412259675503>🔺</emoji>ʜᴏᴍᴇ "
-NEXT_PAGE         : "<emoji id=5409222721869459068>✈️</emoji>"
-BACK_PAGE         : "<emoji id=5409222721869459068>✈️</emoji>"
-UNBAN_BUTTON      : "✦ ᴜɴʙᴀɴ ✦"
+CLOSE_BUTTON  : "✘ ᴄʟᴏsᴇ ✘"
+CLOSEMENU_BUTTON  : "⌯ ᴄʟᴏsᴇ ᴍᴇɴᴜ ⌯"
+BACK_BUTTON : "↫ʙᴀᴄᴋ ⌯"
+NEXT_PAGE: "»"
+BACK_PAGE: "«"
+UNBAN_BUTTON : "⚑ ᴜɴʙᴀɴ ⚑"
 
 #Lyrics
 L_B_1 : "🚀 ᴄʜᴇᴄᴋᴏᴜᴛ ʟʏʀɪᴄs ɴᴏᴡ"

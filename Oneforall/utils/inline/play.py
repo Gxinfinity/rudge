@@ -2,6 +2,7 @@ import math
 
 from pyrogram.types import InlineKeyboardButton
 
+from pyrogram.enums import ButtonStyle
 from Oneforall import app
 from Oneforall.utils.formatters import time_to_seconds
 
@@ -54,10 +55,12 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
     else:
         bar = "━━━━━━━━━❍"
     buttons = [
-        [
+                [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
+                style=ButtonStyle.PRIMARY,
+                icon_custom_emoji_id=5204046146955153467
             )
         ],
         [

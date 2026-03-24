@@ -35,13 +35,13 @@ FORCE_CHANNEL_1 = config.FORCE_CHANNEL_1
 FORCE_CHANNEL_2 = config.FORCE_CHANNEL_2
 
 NEXT_IMG = [
-    "https://graph.org/file/d22cec7c75e26f36edff7-0ce8cae0037d4aa0aa.jpg",
+    "https://graph.org/file/1c82daf46ac2ec57b7827-3a05aa863a378ed34a.jpg",
 
-"https://graph.org/file/37121598cf32913ff783c-e0526226ace3708a89.jpg",
+"https://graph.org/file/2f8e61c55d311070339c8-17b572b5c7c8ad0907.jpg",
 
-"https://graph.org/file/82379bbebbdd4ec7aba3e-d3a42778d30fbfa9aa.jpg",
-    "https://graph.org/file/c53dfca85e9e0b5bc9cd1-afa1339cd5d4e6522c.jpg",
-    "https://graph.org/file/3a907478d7a13ff1e8ecb-606e29f797b109ab82.jpg",
+"https://graph.org/file/1c82daf46ac2ec57b7827-3a05aa863a378ed34a.jpg",
+    "https://graph.org/file/2f8e61c55d311070339c8-17b572b5c7c8ad0907.jpg",
+    "https://graph.org/file/1c82daf46ac2ec57b7827-3a05aa863a378ed34a.jpg",
     "https://graph.org/file/35f6ffeeac9c330200742-eecc5ab1977d58e06b.jpg",
 ]
 

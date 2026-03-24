@@ -148,7 +148,7 @@ async def stream(
             upl = close_markup(_)
             return await app.send_photo(
                 original_chat_id,
-                has_spoiler=True
+                has_spoiler=True,
                 photo=carbon,
                 caption=_["play_21"].format(position, link),
                 reply_markup=upl,

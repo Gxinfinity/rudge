@@ -105,7 +105,6 @@ async def stream(
                     file_path,
                     video=status,
                     image=thumbnail,
-                    has_spoiler=True,
                 )
                 await put_queue(
                     chat_id,

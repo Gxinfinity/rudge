@@ -105,6 +105,7 @@ async def stream(
                     file_path,
                     video=status,
                     image=thumbnail,
+                    has_spoiler=True,
                 )
                 await put_queue(
                     chat_id,
@@ -123,6 +124,7 @@ async def stream(
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
+                    has_spoiler=True,
                     caption=_["stream_1"].format(
                         f"https://t.me/{app.username}?start=info_{vidid}",
                         title[:18],
@@ -157,6 +159,7 @@ async def stream(
         title = (result["title"]).title()
         duration_min = result["duration_min"]
         thumbnail = result["thumb"]
+        has_spoiler=True,
         status = True if video else None
         try:
             file_path, direct = await YouTube.download(
@@ -182,6 +185,7 @@ async def stream(
             await app.send_photo(
                 chat_id=original_chat_id,
                 photo=img,
+                has_spoiler=True,
                 caption=_["queue_4"].format(
                     position, title[:18], duration_min, user_name
                 ),
@@ -196,6 +200,7 @@ async def stream(
                 file_path,
                 video=status,
                 image=thumbnail,
+                has_spoiler=True,
             )
             await put_queue(
                 chat_id,
@@ -214,6 +219,7 @@ async def stream(
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
+                has_spoiler=True,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
                     title[:18],
@@ -332,6 +338,7 @@ async def stream(
         vidid = result["vidid"]
         title = (result["title"]).title()
         thumbnail = result["thumb"]
+        has_spoiler=True,
         duration_min = "Live Track"
         status = True if video else None
         if await is_active_chat(chat_id):

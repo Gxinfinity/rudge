@@ -149,6 +149,7 @@ async def stream(
             upl = close_markup(_)
             return await app.send_photo(
                 original_chat_id,
+                has_spoiler=True
                 photo=carbon,
                 caption=_["play_21"].format(position, link),
                 reply_markup=upl,
@@ -159,7 +160,6 @@ async def stream(
         title = (result["title"]).title()
         duration_min = result["duration_min"]
         thumbnail = result["thumb"]
-        has_spoiler=True,
         status = True if video else None
         try:
             file_path, direct = await YouTube.download(
@@ -200,7 +200,6 @@ async def stream(
                 file_path,
                 video=status,
                 image=thumbnail,
-                has_spoiler=True,
             )
             await put_queue(
                 chat_id,
@@ -390,6 +389,7 @@ async def stream(
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
+                has_spoiler=True,
                 caption=_["stream_1"].format(
                     f"https://t.me/{app.username}?start=info_{vidid}",
                     title[:23],

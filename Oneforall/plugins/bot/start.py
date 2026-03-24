@@ -51,7 +51,7 @@ STICKER = [
     "CAACAgUAAxkBAAEQEGVpSR-TuCKHP8D69SvDAAH2Gn7QjXEAAtIEAAKP9uhXzLPwoqMKxuQ2BA",
 ]
 
-EMOJIOS = ["🚩", "🥀", "🪄", "🩷", "⚡", "❤️‍🩹", "🩶", "🩵", "💜", "🕊"]
+EMOJIOS = ["<emoji id='5438224604499819092'>💞</emoji>", "<emoji id='6026236216079290036'>💜</emoji>", "<emoji id='6026256492619895014'>🎵</emoji>", "<emoji id='5436346075998864232'>🥰</emoji>", "<emoji id='6001604106190330097'>✅</emoji>", ]
 
 
 # ==============================

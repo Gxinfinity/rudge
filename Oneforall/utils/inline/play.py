@@ -55,14 +55,15 @@ def stream_markup_timer(_, vidid, chat_id, played, dur):
     else:
         bar = "━━━━━━━━━❍"
     buttons = [
-                [
+                        [
             InlineKeyboardButton(
                 text=f"{played} {bar} {dur}",
                 callback_data="GetTimer",
-                style=ButtonStyle.PRIMARY,
-                icon_custom_emoji_id=5204046146955153467
+                style=1, # Primary ke liye 1
+                icon_custom_emoji_id="5204046146955153467" # Sirf ID quotes mein
             )
         ],
+
         [
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
